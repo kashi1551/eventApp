@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+
+
+<% include ('./partial/nav.ejs') %>
+
+
+<div>
+    <h2> All Events</h2>
+<div>
+<% if (events.length > 0) { %>
+    <% events.forEach(event => { %>
+        <div>
+            <h3><%= event.title %></h3>
+            <p><%= event.date %></p>
+            <p><%= event.organizer %></p>
+            <p><%= event.description %></p>
+
+
+        </div>
+<%}) %>
+<% } else { %>
+    <p>No events available.</p>
+    <% } %>
+
+    </div>
+
+</div>
+
+</body>
+</html>
